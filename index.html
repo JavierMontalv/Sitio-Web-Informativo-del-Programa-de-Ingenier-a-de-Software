@@ -30,7 +30,9 @@
             <li><a href="#programa" class="navegacion__enlace">Programa</a></li>
             <li><a href="#recursos" class="navegacion__enlace">Recursos</a></li>
             <li><a href="#novedades" class="navegacion__enlace">Novedades</a></li>
-            <li><a href="#vida-estudiantil" class="navegacion__enlace">Vida estudiantil</a></li>
+            <li>
+              <a href="#vida-estudiantil" class="navegacion__enlace"> Vida estudiantil </a>
+            </li>
             <li><a href="#contacto" class="navegacion__enlace">Contacto</a></li>
           </ul>
         </nav>
@@ -55,8 +57,8 @@
             </p>
 
             <div class="hero__acciones">
-              <a href="#recursos" class="boton boton--primario">Ver recursos</a>
-              <a href="#contacto" class="boton boton--secundario">Contactar coordinación</a>
+              <a href="#recursos" class="boton boton--primario"> Ver recursos </a>
+              <a href="#contacto" class="boton boton--secundario"> Contactar coordinación </a>
             </div>
           </div>
 
@@ -151,37 +153,37 @@
             <article class="tarjeta recurso">
               <h3 class="tarjeta__titulo">Plataforma académica</h3>
               <p class="tarjeta__texto">Consulta tus notas, horarios y matrícula.</p>
-              <a href="#" class="enlace-accion" target="_blank">Ir a la plataforma</a>
+              <a href="#" class="enlace-accion" target="_blank"> Ir a la plataforma </a>
             </article>
 
             <article class="tarjeta recurso">
               <h3 class="tarjeta__titulo">Aula virtual</h3>
               <p class="tarjeta__texto">Accede a contenidos, actividades y foros.</p>
-              <a href="#" class="enlace-accion" target="_blank">Ir al aula virtual</a>
+              <a href="#" class="enlace-accion" target="_blank"> Ir al aula virtual </a>
             </article>
 
             <article class="tarjeta recurso">
               <h3 class="tarjeta__titulo">Biblioteca digital</h3>
               <p class="tarjeta__texto">Libros, artículos y trabajos de grado.</p>
-              <a href="#" class="enlace-accion" target="_blank">Ver recursos</a>
+              <a href="#" class="enlace-accion" target="_blank"> Ver recursos </a>
             </article>
 
             <article class="tarjeta recurso">
               <h3 class="tarjeta__titulo">Guías y formatos</h3>
               <p class="tarjeta__texto">Plantillas, normas APA y documentos útiles.</p>
-              <a href="#" class="enlace-accion" target="_blank">Descargar guías</a>
+              <a href="#" class="enlace-accion" target="_blank"> Descargar guías </a>
             </article>
 
             <article class="tarjeta recurso">
               <h3 class="tarjeta__titulo">Herramientas recomendadas</h3>
               <p class="tarjeta__texto">Editores, diagramación y control de versiones.</p>
-              <a href="#" class="enlace-accion" target="_blank">Ver herramientas</a>
+              <a href="#" class="enlace-accion" target="_blank"> Ver herramientas </a>
             </article>
 
             <article class="tarjeta recurso">
               <h3 class="tarjeta__titulo">Apoyo académico</h3>
               <p class="tarjeta__texto">Monitorías, tutorías y consejería.</p>
-              <a href="#" class="enlace-accion" target="_blank">Ver apoyo</a>
+              <a href="#" class="enlace-accion" target="_blank"> Ver apoyo </a>
             </article>
           </div>
         </div>
@@ -285,26 +287,39 @@
           </header>
 
           <div class="grid grid--dos-columnas contacto">
+            <!-- Información de referencia -->
             <div>
               <h3 class="contacto__titulo">Información de referencia</h3>
+
               <ul class="lista-contacto">
-                <li><strong>Correo académico:</strong> ejemplo.programa@ucomp.edu</li>
+                <li>
+                  <strong>Correo académico:</strong>
+                  <a href="mailto:breynermp@outlook.es"> breynermp@outlook.es </a>
+                </li>
                 <li><strong>Ciudad:</strong> Bogotá, Colombia</li>
                 <li><strong>Horario:</strong> Lun–Vie · 8:00 a.m. – 5:00 p.m.</li>
               </ul>
+
               <p class="contacto__nota">*Datos de ejemplo.</p>
             </div>
 
+            <!-- Formulario -->
             <form id="form-contacto" class="formulario" novalidate>
               <div class="formulario__grupo">
                 <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" required placeholder="Tu nombre" />
+                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
                 <p class="formulario__error" data-error-for="nombre"></p>
               </div>
 
               <div class="formulario__grupo">
                 <label for="correo">Correo institucional</label>
-                <input type="email" id="correo" required placeholder="tunombre@ejemplo.edu.co" />
+                <input
+                  type="email"
+                  id="correo"
+                  name="correo"
+                  required
+                  placeholder="tunombre@ejemplo.edu.co"
+                />
                 <p class="formulario__error" data-error-for="correo"></p>
               </div>
 
@@ -312,6 +327,7 @@
                 <label for="mensaje">Mensaje</label>
                 <textarea
                   id="mensaje"
+                  name="mensaje"
                   rows="4"
                   required
                   placeholder="Escribe tu mensaje..."
@@ -319,7 +335,8 @@
                 <p class="formulario__error" data-error-for="mensaje"></p>
               </div>
 
-              <button class="boton boton--primario" type="submit">Enviar mensaje</button>
+              <button type="submit" class="boton boton--primario">Enviar mensaje</button>
+
               <p id="form-mensaje-estado" class="formulario__estado"></p>
             </form>
           </div>
