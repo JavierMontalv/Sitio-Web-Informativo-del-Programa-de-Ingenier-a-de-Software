@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -5,258 +6,386 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Hoja de vida y portafolio web de Breyner Montalvo, estudiante de Ingeniería de Software."
+      content="Sitio web informativo para estudiantes de Ingeniería de Software. Información del programa, recursos, noticias y contacto."
     />
-    <title>Hoja de Vida - Breyner Montalvo</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="icon"
-      href="https://cdn-icons-png.flaticon.com/512/2721/2721297.png"
-      type="image/png"
-    />
-    <link rel="stylesheet" href="css/estilos.css" />
+    <title>Sitio Estudiantes - Ingeniería de Software</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <button id="btn-top" title="Volver arriba">▲</button>
-
-    <header class="header">
-      <nav class="nav">
+    <header class="encabezado">
+      <div class="contenedor encabezado__contenido">
         <div class="logo">
-          <span class="logo-icon">&lt;/&gt;</span>
-          <span class="logo-text">Breyner Montalvo</span>
+          <span class="logo__icono">&lt;/&gt;</span>
+          <span class="logo__texto">Ing. de Software</span>
         </div>
-        <ul class="menu">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#experiencia">Proyectos</a></li>
-          <li><a href="#educacion">Educación</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
+        <nav class="navegacion" aria-label="Navegación principal">
+          <button class="navegacion__toggle" aria-label="Abrir o cerrar menú" aria-expanded="false">
+            ☰
+          </button>
+          <ul class="navegacion__lista">
+            <li><a href="#inicio" class="navegacion__enlace">Inicio</a></li>
+            <li><a href="#programa" class="navegacion__enlace">Programa</a></li>
+            <li>
+              <a href="#recursos" class="navegacion__enlace">Recursos</a>
+            </li>
+            <li>
+              <a href="#novedades" class="navegacion__enlace">Novedades</a>
+            </li>
+            <li>
+              <a href="#vida-estudiantil" class="navegacion__enlace">Vida estudiantil</a>
+            </li>
+            <li>
+              <a href="#contacto" class="navegacion__enlace">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <section id="inicio" class="hero fade-in">
-      <div class="hero-content">
-        <div class="hero-text">
-          <p class="tagline">Estudiante de Ingeniería de Software</p>
-          <h1>Diseño y desarrollo experiencias web centradas en el usuario.</h1>
-          <p class="hero-desc">
-            Apasionado por el desarrollo FrontEnd, la creación de interfaces limpias y el uso de
-            buenas prácticas para construir soluciones tecnológicas de calidad.
-          </p>
-          <div class="hero-buttons">
-            <a href="#experiencia" class="btn btn-primary">Ver proyectos</a>
-            <a href="#contacto" class="btn btn-outline">Contactarme</a>
+    <main>
+      <!-- Sección Inicio / Hero -->
+      <section id="inicio" class="seccion seccion--hero">
+        <div class="contenedor hero">
+          <div class="hero__texto">
+            <p class="hero__etiqueta">Estudiantes de Ingeniería de Software</p>
+            <h1 class="hero__titulo">
+              Información clave para tu vida académica, en un solo lugar.
+            </h1>
+            <p class="hero__descripcion">
+              Consulta fechas importantes, recursos académicos, noticias y canales de apoyo del
+              programa. Sitio pensado para que encuentres rápido lo que necesitas.
+            </p>
+            <div class="hero__acciones">
+              <a href="#recursos" class="boton boton--primario"> Ver recursos </a>
+              <a href="#contacto" class="boton boton--secundario"> Contactar coordinación </a>
+            </div>
           </div>
-        </div>
-        <div class="hero-image">
-          <div class="photo-frame">
-            <img
-              src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg"
-              alt="Foto profesional de Breyner Montalvo"
-            />
-          </div>
-          <p class="hero-caption">
-            “Construyendo mi futuro en el desarrollo de software, una línea de código a la vez.”
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="sobre-mi" class="section fade-in">
-      <div class="section-inner">
-        <h2>Sobre mí</h2>
-        <p>
-          Soy <span class="resaltado">Breyner Montalvo</span>, estudiante de Ingeniería de Software,
-          con interés en el desarrollo web, la experiencia de usuario y la construcción de
-          soluciones tecnológicas que generen impacto real. Me considero una persona responsable,
-          curiosa y con gran disposición para el trabajo en equipo.
-        </p>
-        <p>
-          Mi objetivo es crecer como <em>desarrollador FrontEnd</em>, aplicando buenas prácticas,
-          uso adecuado de etiquetas semánticas, estilos limpios con CSS y una estructura clara del
-          código, siguiendo principios propios de la Ingeniería de Software.
-        </p>
-      </div>
-    </section>
-
-    <section id="habilidades" class="section section-alt fade-in">
-      <div class="section-inner">
-        <h2>Habilidades</h2>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <h3>Lenguajes y tecnologías</h3>
-            <ul>
-              <li><strong>HTML5</strong> – estructura semántica y accesible.</li>
-              <li><strong>CSS3</strong> – diseño responsivo y maquetación.</li>
-              <li><strong>JavaScript</strong> – interacción y lógica en el navegador.</li>
-              <li>Git y GitHub – control de versiones y trabajo colaborativo.</li>
+          <div class="hero__tarjeta">
+            <h2 class="hero__tarjeta-titulo">Próximas fechas</h2>
+            <ul class="lista-simple">
+              <li><strong>Cierre de parciales:</strong> 15 de noviembre</li>
+              <li><strong>Entrega de proyectos:</strong> 30 de noviembre</li>
+              <li><strong>Inscripción a monitorías:</strong> Hasta el 5 de diciembre</li>
             </ul>
-          </div>
-          <div class="skill-card">
-            <h3>Habilidades blandas</h3>
-            <ul>
-              <li>Trabajo en equipo y comunicación asertiva.</li>
-              <li>Aprendizaje autónomo y responsabilidad.</li>
-              <li>Adaptabilidad a nuevas herramientas.</li>
-              <li>Enfoque en la calidad y el detalle.</li>
-            </ul>
-          </div>
-          <div class="skill-card">
-            <h3>Resumen de competencias</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Área</th>
-                  <th>Nivel</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Maquetación HTML/CSS</td>
-                  <td>Intermedio</td>
-                </tr>
-                <tr>
-                  <td>JavaScript</td>
-                  <td>Básico - Intermedio</td>
-                </tr>
-                <tr>
-                  <td>Control de versiones (Git)</td>
-                  <td>Intermedio</td>
-                </tr>
-                <tr>
-                  <td>Trabajo colaborativo</td>
-                  <td>Alto</td>
-                </tr>
-              </tbody>
-            </table>
+            <p class="hero__tarjeta-nota">
+              *Las fechas son de ejemplo. Puedes actualizarlas según el calendario académico
+              oficial.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="experiencia" class="section fade-in">
-      <div class="section-inner">
-        <h2>Proyectos destacados</h2>
-        <div class="projects-grid">
-          <article class="project-card">
-            <h3>Sitio Web Informativo – Ingeniería de Software</h3>
-            <p>
-              Desarrollo de un sitio web institucional inspirado en la página oficial del programa
-              de Ingeniería de Software de UCompensar, aplicando HTML5, CSS3 y JavaScript nativo.
+      <!-- Sección Programa -->
+      <section id="programa" class="seccion">
+        <div class="contenedor">
+          <header class="seccion__cabecera">
+            <span class="seccion__etiqueta">Sobre el programa</span>
+            <h2 class="seccion__titulo">Ingeniería de Software: perfil y objetivos</h2>
+            <p class="seccion__descripcion">
+              Conoce en qué se enfoca el programa, cuáles son sus propósitos formativos y qué puede
+              esperar un estudiante durante su proceso de formación.
             </p>
-            <p class="project-meta">
-              <span class="tag">HTML</span><span class="tag">CSS</span
-              ><span class="tag">JavaScript</span>
-            </p>
-          </article>
-          <article class="project-card">
-            <h3>Portafolio personal en GitHub</h3>
-            <p>
-              Creación y despliegue de proyectos académicos mediante repositorios públicos en
-              GitHub, utilizando GitHub Pages como hosting gratuito.
-            </p>
-            <p class="project-meta">
-              <span class="tag">Git</span><span class="tag">GitHub Pages</span>
-            </p>
-          </article>
-          <article class="project-card">
-            <h3>Formularios y validación en JavaScript</h3>
-            <p>
-              Implementación de formularios de contacto con validación de campos, manejo de eventos
-              y retroalimentación visual al usuario.
-            </p>
-            <p class="project-meta"><span class="tag">JS</span><span class="tag">UX</span></p>
-          </article>
+          </header>
+
+          <div class="grid grid--dos-columnas">
+            <article class="tarjeta">
+              <h3 class="tarjeta__titulo">Perfil del estudiante</h3>
+              <p class="tarjeta__texto">
+                El estudiante de Ingeniería de Software desarrolla habilidades en programación,
+                análisis de requisitos, diseño de sistemas, pruebas de software y trabajo
+                colaborativo. Se fomenta el pensamiento crítico, la solución de problemas y la
+                capacidad de aprendizaje autónomo.
+              </p>
+            </article>
+
+            <article class="tarjeta">
+              <h3 class="tarjeta__titulo">Áreas de formación</h3>
+              <ul class="lista-con-icono">
+                <li>Fundamentos de programación y estructuras de datos.</li>
+                <li>Ingeniería de requisitos, análisis y diseño.</li>
+                <li>Desarrollo web y móvil.</li>
+                <li>Pruebas, aseguramiento de la calidad y DevOps.</li>
+                <li>Ética profesional y habilidades blandas.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="grid grid--tres-columnas plan">
+            <article class="tarjeta plan__item">
+              <h3 class="tarjeta__titulo">Ciclo básico</h3>
+              <p class="tarjeta__texto">
+                Matemáticas, lógica, fundamentos de programación, introducción a la ingeniería de
+                software y habilidades comunicativas.
+              </p>
+            </article>
+            <article class="tarjeta plan__item">
+              <h3 class="tarjeta__titulo">Ciclo profesional</h3>
+              <p class="tarjeta__texto">
+                Arquitectura de software, desarrollo de aplicaciones, bases de datos, pruebas,
+                metodologías ágiles y proyectos integradores.
+              </p>
+            </article>
+            <article class="tarjeta plan__item">
+              <h3 class="tarjeta__titulo">Proyección</h3>
+              <p class="tarjeta__texto">
+                Emprendimiento, proyectos de grado, práctica profesional y preparación para
+                certificaciones técnicas.
+              </p>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="educacion" class="section section-alt fade-in">
-      <div class="section-inner">
-        <h2>Educación</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-year">Actual</span>
-            <div class="timeline-content">
-              <h3>Ingeniería de Software</h3>
-              <p>Fundación Universitaria Compensar – Bogotá, Colombia.</p>
-              <p>
-                Formación enfocada en el desarrollo de software, metodologías ágiles y buenas
-                prácticas de programación.
+      <!-- Sección Recursos -->
+      <section id="recursos" class="seccion seccion--fondo-suave">
+        <div class="contenedor">
+          <header class="seccion__cabecera">
+            <span class="seccion__etiqueta">Apoyo académico</span>
+            <h2 class="seccion__titulo">Recursos para estudiantes</h2>
+            <p class="seccion__descripcion">
+              Accede rápidamente a las plataformas y documentos que usas en el día a día. Puedes
+              personalizar estos enlaces según tu institución.
+            </p>
+          </header>
+
+          <div class="grid grid--tres-columnas">
+            <article class="tarjeta recurso">
+              <h3 class="tarjeta__titulo">Plataforma académica</h3>
+              <p class="tarjeta__texto">Consulta notas, horarios, matrícula y estado académico.</p>
+              <a href="#" class="enlace-accion" target="_blank" rel="noopener noreferrer">
+                Ir a la plataforma
+              </a>
+            </article>
+
+            <article class="tarjeta recurso">
+              <h3 class="tarjeta__titulo">Aula virtual</h3>
+              <p class="tarjeta__texto">
+                Accede a contenidos de las asignaturas, foros, cuestionarios y actividades.
+              </p>
+              <a href="#" class="enlace-accion" target="_blank" rel="noopener noreferrer">
+                Ir al aula virtual
+              </a>
+            </article>
+
+            <article class="tarjeta recurso">
+              <h3 class="tarjeta__titulo">Biblioteca y repositorios</h3>
+              <p class="tarjeta__texto">
+                Libros digitales, artículos, trabajos de grado y material de consulta.
+              </p>
+              <a href="#" class="enlace-accion" target="_blank" rel="noopener noreferrer">
+                Ver recursos
+              </a>
+            </article>
+
+            <article class="tarjeta recurso">
+              <h3 class="tarjeta__titulo">Guías y formatos</h3>
+              <p class="tarjeta__texto">
+                Plantillas para trabajos escritos, normas APA, formatos de proyecto, etc.
+              </p>
+              <a href="#" class="enlace-accion" target="_blank" rel="noopener noreferrer">
+                Descargar guías
+              </a>
+            </article>
+
+            <article class="tarjeta recurso">
+              <h3 class="tarjeta__titulo">Herramientas recomendadas</h3>
+              <p class="tarjeta__texto">
+                Editores de código, gestores de tareas, herramientas de diagramación y control de
+                versiones.
+              </p>
+              <a href="#" class="enlace-accion" target="_blank" rel="noopener noreferrer">
+                Ver herramientas
+              </a>
+            </article>
+
+            <article class="tarjeta recurso">
+              <h3 class="tarjeta__titulo">Apoyo académico</h3>
+              <p class="tarjeta__texto">
+                Información sobre monitorías, tutorías, consejería académica y apoyo emocional.
+              </p>
+              <a href="#" class="enlace-accion" target="_blank" rel="noopener noreferrer">
+                Ver opciones de apoyo
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Novedades -->
+      <section id="novedades" class="seccion">
+        <div class="contenedor">
+          <header class="seccion__cabecera">
+            <span class="seccion__etiqueta">Actualidad</span>
+            <h2 class="seccion__titulo">Novedades y avisos</h2>
+            <p class="seccion__descripcion">
+              Espacio para publicar noticias breves, recordatorios y eventos relevantes para el
+              programa.
+            </p>
+          </header>
+
+          <div class="grid grid--dos-columnas">
+            <article class="tarjeta aviso">
+              <h3 class="tarjeta__titulo">Convocatoria a semillero de investigación</h3>
+              <p class="tarjeta__meta">Publicado: 20 de octubre</p>
+              <p class="tarjeta__texto">
+                Se abre convocatoria para estudiantes interesados en vincularse al semillero de
+                ingeniería de software. Se requiere disposición para investigación, trabajo en
+                equipo y manejo básico de programación.
+              </p>
+            </article>
+
+            <article class="tarjeta aviso">
+              <h3 class="tarjeta__titulo">Charla: Buenas prácticas en Git</h3>
+              <p class="tarjeta__meta">Publicado: 18 de octubre</p>
+              <p class="tarjeta__texto">
+                Charla virtual sobre flujos de trabajo con Git y GitHub, ramas, pull requests y
+                manejo de conflictos. Abierta a todos los semestres.
+              </p>
+            </article>
+
+            <article class="tarjeta aviso">
+              <h3 class="tarjeta__titulo">Recordatorio de entregas</h3>
+              <p class="tarjeta__meta">Publicado: 15 de octubre</p>
+              <p class="tarjeta__texto">
+                Revisa en tu aula virtual las fechas límite de entrega de proyectos. Planifica tu
+                trabajo con anticipación y evita contratiempos.
+              </p>
+            </article>
+
+            <article class="tarjeta aviso">
+              <h3 class="tarjeta__titulo">Soporte tecnológico</h3>
+              <p class="tarjeta__meta">Publicado: 10 de octubre</p>
+              <p class="tarjeta__texto">
+                Si tienes problemas con acceso a plataformas, restablecimiento de contraseña o
+                licencias de software, comunícate con la mesa de ayuda institucional.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Vida Estudiantil -->
+      <section id="vida-estudiantil" class="seccion seccion--fondo-suave">
+        <div class="contenedor">
+          <header class="seccion__cabecera">
+            <span class="seccion__etiqueta">Comunidad</span>
+            <h2 class="seccion__titulo">Vida estudiantil y consejos</h2>
+            <p class="seccion__descripcion">
+              La formación no solo es académica. También importa cómo gestionas tu tiempo, tu
+              bienestar y tu participación en la comunidad.
+            </p>
+          </header>
+
+          <div class="grid grid--tres-columnas">
+            <article class="tarjeta">
+              <h3 class="tarjeta__titulo">Organización y hábitos</h3>
+              <ul class="lista-con-icono">
+                <li>Utiliza calendarios para seguir tus entregas.</li>
+                <li>Separa bloques de estudio y descanso.</li>
+                <li>Documenta tus proyectos desde el inicio.</li>
+              </ul>
+            </article>
+
+            <article class="tarjeta">
+              <h3 class="tarjeta__titulo">Participación</h3>
+              <ul class="lista-con-icono">
+                <li>Vincúlate a semilleros y grupos estudiantiles.</li>
+                <li>Asiste a charlas, talleres y eventos.</li>
+                <li>Comparte conocimiento con tus compañeros.</li>
+              </ul>
+            </article>
+
+            <article class="tarjeta">
+              <h3 class="tarjeta__titulo">Bienestar</h3>
+              <ul class="lista-con-icono">
+                <li>Equilibra estudio, descanso y ocio.</li>
+                <li>Busca apoyo cuando te sientas sobrecargado.</li>
+                <li>Cuida tu salud mental y física.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Contacto -->
+      <section id="contacto" class="seccion seccion--contacto">
+        <div class="contenedor">
+          <header class="seccion__cabecera">
+            <span class="seccion__etiqueta">Canales de comunicación</span>
+            <h2 class="seccion__titulo">Contacto del programa</h2>
+            <p class="seccion__descripcion">
+              Si tienes dudas académicas generales, inquietudes sobre el programa o sugerencias
+              sobre este sitio, puedes usar el siguiente formulario.
+            </p>
+          </header>
+
+          <div class="grid grid--dos-columnas contacto">
+            <div>
+              <h3 class="contacto__titulo">Información de referencia</h3>
+              <ul class="lista-contacto">
+                <li><strong>Correo académico:</strong> ejemplo.programa@ucomp.edu</li>
+                <li><strong>Ciudad:</strong> Bogotá, Colombia</li>
+                <li>
+                  <strong>Horario de atención:</strong> Lunes a viernes, 8:00 a.m. – 5:00 p.m.
+                </li>
+              </ul>
+              <p class="contacto__nota">
+                *Los datos de contacto son de ejemplo. Puedes reemplazarlos por los oficiales de tu
+                institución o de la asignatura.
               </p>
             </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">Formación complementaria</span>
-            <div class="timeline-content">
-              <h3>Cursos y certificaciones</h3>
-              <ul>
-                <li>Introducción al desarrollo web – HTML y CSS.</li>
-                <li>Fundamentos de programación y algoritmia.</li>
-                <li>Talleres de comunicación efectiva.</li>
-              </ul>
-            </div>
+
+            <form id="form-contacto" class="formulario" novalidate autocomplete="on">
+              <div class="formulario__grupo">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+                <p class="formulario__error" data-error-for="nombre"></p>
+              </div>
+
+              <div class="formulario__grupo">
+                <label for="correo">Correo institucional</label>
+                <input
+                  type="email"
+                  id="correo"
+                  name="correo"
+                  placeholder="tunombre@ejemplo.edu.co"
+                  required
+                />
+                <p class="formulario__error" data-error-for="correo"></p>
+              </div>
+
+              <div class="formulario__grupo">
+                <label for="mensaje">Mensaje</label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  rows="4"
+                  placeholder="Escribe tu mensaje..."
+                  required
+                ></textarea>
+                <p class="formulario__error" data-error-for="mensaje"></p>
+              </div>
+
+              <button type="submit" class="boton boton--primario">Enviar mensaje</button>
+
+              <p id="form-mensaje-estado" class="formulario__estado"></p>
+            </form>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <section id="contacto" class="section contacto fade-in">
-      <div class="section-inner">
-        <h2>Contacto</h2>
-        <p>Si deseas conocer más sobre mi perfil o colaborar en un proyecto, puedes contactarme:</p>
-        <div class="contact-grid">
-          <div class="contact-info">
-            <p>
-              <strong>Correo:</strong>
-              <a href="mailto:Breynermp@outlook.es" class="correo">Breynermp@outlook.es</a>
-            </p>
-            <p>
-              <strong>GitHub:</strong>
-              <a href="https://github.com/JavierMontalv" target="_blank"
-                >github.com/JavierMontalv</a
-              >
-            </p>
-            <p><strong>Ciudad:</strong> Bogotá, Colombia</p>
-          </div>
-          <form id="form-contacto" class="contact-form" novalidate>
-            <div class="campo">
-              <label for="nombre">Nombre</label
-              ><input type="text" id="nombre" required placeholder="Tu nombre" />
-            </div>
-            <div class="campo">
-              <label for="email">Correo electrónico</label
-              ><input type="email" id="email" required placeholder="tucorreo@ejemplo.com" />
-            </div>
-            <div class="campo">
-              <label for="mensaje">Mensaje</label
-              ><textarea
-                id="mensaje"
-                rows="4"
-                required
-                placeholder="Escribe tu mensaje..."
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-            <p id="mensaje-estado" class="mensaje-estado"></p>
-          </form>
-        </div>
-      </div>
-    </section>
+    <button class="boton-arriba" id="boton-arriba" aria-label="Volver al inicio">▲</button>
 
-    <footer class="footer">
-      <p>© 2025 Breyner Montalvo · Portafolio académico</p>
-      <p>
-        Desarrollado como proyecto colaborativo para la asignatura Introducción a los Lenguajes de
-        Internet.
-      </p>
+    <footer class="pie">
+      <div class="contenedor pie__contenido">
+        <p>© 2025 Sitio informativo para estudiantes de Ingeniería de Software.</p>
+        <p>
+          Desarrollado como proyecto académico para la asignatura de introducción al desarrollo web.
+        </p>
+      </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
